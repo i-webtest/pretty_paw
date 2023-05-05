@@ -1,0 +1,90 @@
+.career {
+  padding-top: 80px;
+  padding-bottom: 30px;
+
+  @include lg {
+    padding-top: 100px;
+    padding-bottom: 60px;
+  }
+
+  &__container {}
+
+  &__content {
+    margin-bottom: 40px;
+
+    @include md {
+      display: grid;
+      gap: 11px 21px;
+      grid-template-areas: 
+        'title link'
+        'description .';
+    }
+
+    @include lg {
+      gap: 27px 31px;
+      margin-bottom: 50px;
+    }
+  }
+
+  &__title {
+    font-weight: 1000;
+    font-size: 32px;
+    line-height: 1;
+    text-transform: uppercase;
+    color: $second;
+    margin-bottom: 24px;
+
+    @include md {
+      grid-area: title;
+      margin-bottom: 0;
+    }
+
+    @include lg {
+      font-size: 52px;
+    }
+  }
+
+  &__description {
+    margin-bottom: 24px;
+
+    @include md {
+      grid-area: description;
+      max-width: 528px;
+      margin-bottom: 0;
+    }
+
+    @include lg {
+      max-width: 720px;
+    }
+  }
+
+  &__link {
+    
+    @include md {
+      grid-area: link;
+      justify-self: end;
+    }
+  }
+
+  &__slider {}
+
+  &__image-list {}
+
+  &__image-item {}
+
+  &__image-wrapper {}
+
+  &__image {
+    border-radius: 16px;
+  }
+}
+
+.container {}
+
+.link-main {}
+
+.swiper {}
+
+.swiper-wrapper {}
+
+.swiper-slide {}
