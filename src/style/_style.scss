@@ -18,6 +18,10 @@ body {
   font-size: 16px;
   color: $main;
   background-color: $back;
+
+  @include lg {
+    font-size: 20px;
+  }
 }
 
 
@@ -71,6 +75,15 @@ iframe {
   transform: scale(0);
 }
 
+.video-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
 
 /*
 Пример контейнера
@@ -82,8 +95,30 @@ iframe {
 */
 
 .container {
-  padding: 0 16px;
+  padding-left: 16px;
+  padding-right: 16px;
   margin: 0 auto;
+
+  @include sm {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+
+  @include md {
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+
+  @include xl {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+
+  @include xxl {
+    max-width: 2560px;
+    padding-left: 60px;
+    padding-right: 60px;
+  }
 }
 
 .link-main {
