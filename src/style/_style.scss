@@ -140,4 +140,25 @@ iframe {
     height: 16px;
     background: url('../img/arrow-right.svg') center/contain no-repeat;
   }
+
+  @include lg {
+    gap: 10px;
+    font-size: 20px;
+    padding: 17px 32px;
+  }
 }
+
+.swiper-pagination-bullet {
+  width: 10px;
+  height: 10px;
+  border-radius: 16px;
+  background-color: $second;
+  transition: width .3s ease;
+  opacity: 1;
+}
+
+.swiper-pagination-bullet-active {
+  width: 40px;
+  background-color: $back;
+}
+
