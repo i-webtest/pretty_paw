@@ -1,13 +1,12 @@
 .career {
   padding-top: 80px;
   padding-bottom: 30px;
+  overflow-x: hidden;
 
   @include lg {
     padding-top: 100px;
     padding-bottom: 60px;
   }
-
-  &__container {}
 
   &__content {
     margin-bottom: 40px;
@@ -66,11 +65,39 @@
     }
   }
 
-  &__slider {}
+  &__slider {
+    overflow: visible;
+  }
 
   &__image-list {}
 
-  &__image-item {}
+  &__image-item {
+    display: flex;
+    align-items: center;
+    height: unset;
+    
+    @include md {
+      &:nth-child(odd) {
+        width: 34%;
+      }
+    
+      &:nth-child(even) {
+        width: 25%;
+      }
+    }
+
+    @include xl {
+      &:nth-child(odd) {
+        width: 27%;
+      }
+    
+      &:nth-child(even) {
+        width: 20%;
+      }
+    }
+
+    
+  }
 
   &__image-wrapper {}
 
@@ -79,12 +106,3 @@
   }
 }
 
-.container {}
-
-.link-main {}
-
-.swiper {}
-
-.swiper-wrapper {}
-
-.swiper-slide {}
