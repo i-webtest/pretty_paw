@@ -42,8 +42,6 @@
     }
   }
 
-  &__social-item {}
-
   &__social-link {
     display: block;
     width: 36px;
@@ -68,6 +66,22 @@
 
     &:last-child {
       margin-bottom: 0;
+    }
+  }
+
+  &__social-link,
+  &__developer-link {
+    color: $main;
+    outline: 2px solid transparent;
+    outline-offset: 2px;
+    border-radius: 4px;
+
+    &:focus:not(:hover) {
+      outline-color: $second;
+    }
+
+    &:hover {
+      color: $second;
     }
   }
 }
