@@ -64,6 +64,12 @@ export const menuControl = () => {
     }
   };
 
+  navigationList.addEventListener('click', ({ target }) => {
+    if (target.closest('.navigation__link')) {
+      closeMenu();
+    }
+  });
+
   const mediaQuery = window.matchMedia('(min-width: 1240px)');
 
   mediaQuery.addEventListener('change', checkScreenSize);
